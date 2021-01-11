@@ -2,20 +2,24 @@
 
 @model System.Collections.Generic.IList<webProject.Model.Student>
 
-<h1>List</h1>
+<h1 style="margin-top: 70px;">List</h1>
 
-<table>
-    <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>score</th>
-    </tr>
-    @foreach (var st in Model)
-    {
+<table class="table">
+    <thead>
         <tr>
-            <th>@st.Id</th>
-            <th>@st.Name</th>
-            <th>@st.Score</th>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">score</th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var st in Model)
+        {
+            <tr scope="row">
+                <th>@st.Id</th>
+                <th>@st.Name</th>
+                <th>@st.Score</th>
+            </tr>
+        }
+    </tbody>
 </table>

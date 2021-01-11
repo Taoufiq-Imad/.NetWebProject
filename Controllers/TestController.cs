@@ -7,7 +7,7 @@ namespace webProject.Controllers
         public IActionResult Index(){
             IList<string> items=new List<string>();
             items.Add("Imad");
-            items.Add("Oumayma");
+            items.Add("Mohamed");
             items.Add("Hamza");
             items.Add("Hajar");
             ViewData["email"]="imad@taoufiq.ma";
@@ -17,7 +17,7 @@ namespace webProject.Controllers
         public IActionResult List(){
             IList<Student> students=new List<Student>();
             students.Add(new Student{Id=1,Name="Imad",Score=60});
-            students.Add(new Student{Id=2,Name="Oumayma",Score=39});
+            students.Add(new Student{Id=2,Name="Mohamed",Score=39});
             students.Add(new Student{Id=3,Name="Hamza",Score=100});
             return View(students);
         }
